@@ -1,0 +1,107 @@
+pimcore_data_hub:
+    configurations:
+        manf_upload:
+            general:
+                active: true
+                type: dataImporterDataObject
+                name: manf_upload
+                description: ''
+                group: ''
+                path: null
+                modificationDate: 1676265752
+                createDate: 1675848727
+            loaderConfig:
+                type: asset
+                settings:
+                    assetPath: /Csv/seller.csv
+            interpreterConfig:
+                type: csv
+                settings:
+                    skipFirstRow: true
+                    delimiter: ;
+                    enclosure: '"'
+                    escape: \
+            resolverConfig:
+                elementType: dataObject
+                dataObjectClassId: seller
+                loadingStrategy:
+                    type: notLoad
+                createLocationStrategy:
+                    type: staticPath
+                    settings:
+                        path: '/Manufacturers and Sellers/Seller'
+                locationUpdateStrategy:
+                    type: noChange
+                publishingStrategy:
+                    type: alwaysPublish
+            processingConfig:
+                executionType: sequential
+                doArchiveImportFile: true
+                idDataIndex: ''
+            mappingConfig:
+                -
+                    label: id
+                    dataSourceIndex:
+                        - '1'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: sellerId
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+                -
+                    label: Name
+                    dataSourceIndex:
+                        - '2'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: Name
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+                -
+                    label: Mobile
+                    dataSourceIndex:
+                        - '3'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: mobileNo
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+                -
+                    label: key
+                    dataSourceIndex:
+                        - '2'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: key
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+            executionConfig:
+                scheduleType: job
+                cronDefinition: ''
+                scheduledAt: '08-02-2023 10:52'
+            permissions:
+                user:
+                    -
+                        id: 9
+                        name: BusinessUser
+                        read: true
+                        update: true
+                        delete: true
+                role: {  }
+            workspaces: {  }

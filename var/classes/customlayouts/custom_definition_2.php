@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'Price',
    'description' => '',
    'creationDate' => 1675938717,
-   'modificationDate' => 1676006591,
+   'modificationDate' => 1676528131,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronics',
@@ -67,7 +67,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'width' => '',
              'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
+             'defaultUnit' => 'INR',
              'validUnits' => 
             array (
               0 => 'INR',
@@ -114,7 +114,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\CalculatedValue::__set_state(array(
              'name' => 'displayPrice',
              'title' => 'Display Price',
              'tooltip' => '',
@@ -125,7 +125,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'calculatedValue',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -133,16 +133,12 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
+             'elementType' => 'input',
+             'width' => 250,
+             'calculatorType' => 'class',
+             'calculatorExpression' => '',
+             'calculatorClass' => '@App\\Controller\\DiscountCalc',
+             'columnLength' => 250,
           )),
         ),
          'locked' => false,

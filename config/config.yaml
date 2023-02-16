@@ -1,6 +1,6 @@
 imports:
     - { resource: 'local/' }
-    # - { resource: 'workflow/' }
+    - { resource: 'workflow/' }
 
 
 pimcore:
@@ -139,3 +139,7 @@ framework:
 #        transports:
 #            main: smtp://user:pass@smtp.example.com:port
 #            pimcore_newsletter: smtp://user:pass@smtp.example.com:port
+    mailer:
+        transports:
+            main: smtp://punitdekateofficial@gmail.com:tileiedjbbsgvwdz@smtp.gmail.com:587
+            pimcore_newsletter: smtp://punitdekateofficial@gmail.com:tileiedjbbsgvwdz@smtp.gmail.com:587

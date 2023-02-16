@@ -12,7 +12,7 @@ class CustomOptionsColor implements SelectOptionsProviderInterface
 {
     public function getDefaultValue($context, $fieldDefinition)
     {
-        return "db_value_1";
+        return " ";
     }
 
     function getOptions($context, $fieldDefinition)

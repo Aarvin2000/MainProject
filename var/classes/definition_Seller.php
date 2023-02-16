@@ -17,7 +17,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Seller',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1676209157,
+   'modificationDate' => 1676268211,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -119,7 +119,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'width' => '',
              'defaultValue' => NULL,
              'columnLength' => 190,
-             'regex' => '',
+             'regex' => '^[a-zA-Z]+(([\',. -][a-zA-Z ])?[a-zA-Z]*)*$',
              'regexFlags' => 
             array (
             ),
@@ -150,7 +150,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'width' => '',
              'defaultValue' => NULL,
              'columnLength' => 190,
-             'regex' => '',
+             'regex' => '^\\d{10}$',
              'regexFlags' => 
             array (
             ),

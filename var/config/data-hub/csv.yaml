@@ -1,0 +1,62 @@
+pimcore_data_hub:
+    configurations:
+        csv:
+            general:
+                active: true
+                type: dataImporterDataObject
+                name: csv
+                description: ''
+                group: ''
+                path: null
+                modificationDate: 1676525251
+                createDate: 1676524961
+            loaderConfig:
+                type: asset
+                settings:
+                    assetPath: /Csv/manufac.csv
+            interpreterConfig:
+                type: csv
+                settings:
+                    skipFirstRow: true
+                    delimiter: ;
+                    enclosure: '"'
+                    escape: \
+            resolverConfig:
+                elementType: dataObject
+                dataObjectClassId: manufacturer
+                loadingStrategy:
+                    type: notLoad
+                createLocationStrategy:
+                    type: staticPath
+                    settings:
+                        path: '/Manufacturers and Sellers/Manufacturer'
+                locationUpdateStrategy:
+                    type: noChange
+                publishingStrategy:
+                    type: alwaysPublish
+            processingConfig:
+                executionType: sequential
+                doArchiveImportFile: true
+                idDataIndex: ''
+            mappingConfig:
+                -
+                    label: name
+                    dataSourceIndex:
+                        - '1'
+                    transformationResultType: default
+                    dataTarget:
+                        type: direct
+                        settings:
+                            fieldName: Name
+                            language: ''
+                            writeIfTargetIsNotEmpty: true
+                            writeIfSourceIsEmpty: true
+                    transformationPipeline: {  }
+            executionConfig:
+                scheduleType: job
+                cronDefinition: ''
+                scheduledAt: '16-02-2023 00:00'
+            permissions:
+                user: {  }
+                role: {  }
+            workspaces: {  }

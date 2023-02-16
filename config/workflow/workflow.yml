@@ -6,16 +6,19 @@ pimcore:
             supports:
                 - 'Pimcore\Model\DataObject\Electronics'
             places:
+
                 base:
-                    label: "Base Attributes"
+                    label: "Add Base Attributes"
                     color: "#377ea9"
                     permissions:
                         - objectLayout: 1
+
                 price:
                     label: "price"
                     color: "#28a013"
                     permissions:
                         - objectLayout: 2
+                
                 features:
                     label: "features"
                     title: "Updating content step"
@@ -29,48 +32,59 @@ pimcore:
                     permissions:
                         - objectLayout: 6
                 media:
-                    label: "media"
+                    label: "Update Media"
                     title: "Image color gallery"
                     color: "#d9ef36"
                     permissions:
-                        - objectLayout: 4
+                        - objectLayout: 4development:
+
                 content_prepared:
-                    label: "Content Prepared"
-                    title: "Content ready to publish"
+                    label: "Content ready to Review"
+                    title: "Content ready to Review"
                     color: "#28a013"
+
                 accepted:
                     label: "Accepted product"
                     color: "#28a013"
 
                 reject:
                     label: "Reject product"
+                    color: "red"
+
+                publish:
+                    label: "Publish Product"
                     color: "#28a013"
 
             transitions:
+
                 add_base_attributes:
                     from: base
                     to: price
                     guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
                     options:
-                        label: "set base attributes"
+                        label: "Set Price"
                         notes:
                             commentEnabled: true
                             commentRequired: true
+
                 add_price:
                     from:  price
                     to: features
                     guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
                     options:
-                        label: "set price"
+                        label: "Set features"
                         notes:
                             commentEnabled: true
                             commentRequired: false
+
+                
+
                 add_features:
                     from: features
                     to: development
                     guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
                     options:
-                        label: "set features"
+                        label: "Add Seller and Manufacturer"
                         notes:
                             commentEnabled: true
                             commentRequired: false
@@ -80,7 +94,7 @@ pimcore:
                     to: media
                     guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
                     options:
-                        label: "set development"
+                        label: "prepare"
                         notes:
                             commentEnabled: true
                             commentRequired: false
@@ -88,7 +102,7 @@ pimcore:
                 add_media:
                     from: media
                     to: content_prepared
-                    guard: "is_fully_authenticated() and is_granted('ROLE_MEDIA')"
+                    guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
                     options:
                         label: "prepare"
                         notes:
@@ -99,7 +113,7 @@ pimcore:
                     to: accepted
                     guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWER')"
                     options:
-                        label: "accept"
+                        label: "Approved"
                         notes:
                             commentEnabled: true
                             commentRequired: false
@@ -109,10 +123,68 @@ pimcore:
                     to: reject
                     guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWER')"
                     options:
-                        label: "reject"
+                        label: "Reject Product"
                         notes:
                             commentEnabled: true
                             commentRequired: false
+
+                publish_transition:
+                    from: accepted
+                    to: publish
+                    guard: "is_fully_authenticated() and is_granted('ROLE_REVIEWER')"
+                    options:
+                        label: "Ready To Publish"
+                        notes:
+                            commentEnabled: true
+                            commentRequired: false
+
+                start_base:
+                    from: reject
+                    to: base
+                    guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
+                    options:
+                        label: "Update Base Attributes"
+                        notes:
+                            commentEnabled: true
+                            commentRequired: false
+                update_price:
+                    from: reject
+                    to: price
+                    guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
+                    options:
+                        label: "Update Price Attributes"
+                        notes:
+                            commentEnabled: true
+                            commentRequired: false
+                update_media:
+                    from: reject
+                    to: media
+                    guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
+                    options:
+                        label: "Update Media"
+                        notes:
+                            commentEnabled: true
+                            commentRequired: false
+                update_features:
+                    from: reject
+                    to: features
+                    guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
+                    options:
+                        label: "Update Features"
+                        notes:
+                            commentEnabled: true
+                            commentRequired: false
+                
+                update_development:
+                    from: reject
+                    to: development
+                    guard: "is_fully_authenticated() and is_granted('ROLE_DATAENTRY')"
+                    options:
+                        label: "Update Manufacturer and Seller"
+                        notes:
+                            commentEnabled: true
+                            commentRequired: false
+                
 
                
 

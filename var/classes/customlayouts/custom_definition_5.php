@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'Features',
    'description' => '',
    'creationDate' => 1675938973,
-   'modificationDate' => 1676006867,
+   'modificationDate' => 1676528175,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronics',
@@ -45,6 +45,72 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
          'children' => 
         array (
           0 => 
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'Layout',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => NULL,
+             'width' => 0,
+             'height' => 0,
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => NULL,
+             'datatype' => 'layout',
+             'permissions' => NULL,
+             'children' => 
+            array (
+              0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
+                 'name' => 'category',
+                 'title' => 'Category',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'manyToManyObjectRelation',
+                 'relationType' => true,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'classes' => 
+                array (
+                  0 => 
+                  array (
+                    'classes' => 'Category',
+                  ),
+                ),
+                 'pathFormatterClass' => '',
+                 'width' => '',
+                 'height' => '',
+                 'maxItems' => NULL,
+                 'visibleFields' => 'Name,fullpath,classname',
+                 'allowToCreateNewObject' => false,
+                 'optimizedAdminLoading' => false,
+                 'enableTextSelection' => false,
+                 'visibleFieldDefinitions' => 
+                array (
+                ),
+              )),
+            ),
+             'locked' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => NULL,
+             'labelWidth' => 100,
+             'labelAlign' => 'left',
+          )),
+          1 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Charging&Battery',
              'type' => NULL,
@@ -152,7 +218,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          1 => 
+          2 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Camera and Connectivity',
              'type' => NULL,
@@ -187,14 +253,11 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'options' => 
-                array (
-                ),
                  'width' => '',
                  'height' => '',
                  'maxItems' => NULL,
                  'renderType' => 'list',
-                 'optionsProviderClass' => '',
+                 'optionsProviderClass' => 'App\\DynamicDropdown\\Connectivity',
                  'optionsProviderData' => '',
                  'dynamicOptions' => false,
               )),
@@ -296,7 +359,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          2 => 
+          3 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'OS',
              'type' => NULL,
@@ -331,12 +394,10 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'options' => 
-                array (
-                ),
+                 'options' => NULL,
                  'width' => '',
                  'defaultValue' => '',
-                 'optionsProviderClass' => '',
+                 'optionsProviderClass' => 'App\\DynamicDropdown\\Os',
                  'optionsProviderData' => '',
                  'columnLength' => 190,
                  'dynamicOptions' => false,
@@ -354,7 +415,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'labelWidth' => 0,
              'labelAlign' => 'left',
           )),
-          3 => 
+          4 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Product specific attributes',
              'type' => NULL,

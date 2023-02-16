@@ -23,9 +23,21 @@ class DiscountCalc implements CalculatorClassInterface
     public function compute(Concrete $object, CalculatedValue $context):string {
         if ($context->getFieldname() == "displayPrice") {
             $language = $context->getPosition();
+            if($object->getdiscountPercentage()&& $object->getPrice()){
             $dis = $object->getdiscountPercentage();
-            $price = $object->getPrice()->getValue($language);
-            return  $price - ($price * $dis)/100;
+            $price = $object->getPrice()->getValue();
+            return strval(($price - ($price * $dis)/100));
+            }
+            else{
+                if($object->getPrice())
+                {
+                    return strval($object->getPrice()->getValue());
+                }
+                else
+                {
+                    return "0";
+                }
+            }
         } else {
             \Logger::error("unknown field");
         }

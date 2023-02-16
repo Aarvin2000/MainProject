@@ -6,7 +6,7 @@ pimcore:
                 sql: ''
                 dataSourceConfig:
                     -
-                        sql: 'category,Count(*)'
+                        sql: 'category, Count(*)'
                         from: object_electronics
                         where: ''
                         groupby: category
@@ -19,7 +19,7 @@ pimcore:
                         order: true
                         width: ''
                         label: ''
-                        id: extModel8525-3
+                        id: extModel1820-3
                     -
                         name: 'Count(*)'
                         display: true
@@ -27,7 +27,7 @@ pimcore:
                         order: true
                         width: ''
                         label: ''
-                        id: extModel8525-4
+                        id: extModel1820-4
                 niceName: ''
                 group: ''
                 groupIconClass: ''
@@ -36,10 +36,10 @@ pimcore:
                 reportClass: ''
                 chartType: pie
                 pieColumn: 'Count(*)'
-                pieLabelColumn: 'Count(*)'
+                pieLabelColumn: category
                 xAxis: null
                 yAxis: {  }
-                modificationDate: 1676026830
+                modificationDate: 1676456175
                 creationDate: 1676018880
                 shareGlobally: true
                 sharedUserNames:

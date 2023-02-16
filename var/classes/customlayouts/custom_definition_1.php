@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'Base',
    'description' => '',
    'creationDate' => 1675938699,
-   'modificationDate' => 1676006591,
+   'modificationDate' => 1676528078,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronics',
@@ -83,7 +83,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
              'name' => 'brandName',
              'title' => 'Brand',
              'tooltip' => '',
@@ -94,7 +94,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'input',
+             'fieldtype' => 'select',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -102,15 +102,13 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
+             'options' => NULL,
              'width' => '',
-             'defaultValue' => NULL,
+             'defaultValue' => ' ',
+             'optionsProviderClass' => 'App\\DynamicDropdown\\BrandName',
+             'optionsProviderData' => '',
              'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
+             'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
           2 => 
@@ -165,50 +163,11 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
             array (
             ),
              'elementType' => 'input',
-             'width' => '',
+             'width' => 250,
              'calculatorType' => 'class',
              'calculatorExpression' => '',
-             'calculatorClass' => '',
-             'columnLength' => 190,
-          )),
-          4 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
-             'name' => 'Category',
-             'title' => 'Category',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'manyToManyObjectRelation',
-             'relationType' => true,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'classes' => 
-            array (
-              0 => 
-              array (
-                'classes' => 'Category',
-              ),
-            ),
-             'pathFormatterClass' => '',
-             'width' => '',
-             'height' => '',
-             'maxItems' => NULL,
-             'visibleFields' => 'Name,classname,fullpath',
-             'allowToCreateNewObject' => false,
-             'optimizedAdminLoading' => false,
-             'enableTextSelection' => false,
-             'visibleFieldDefinitions' => 
-            array (
-            ),
+             'calculatorClass' => '@App\\Controller\\CalculatorController',
+             'columnLength' => 250,
           )),
         ),
          'region' => NULL,

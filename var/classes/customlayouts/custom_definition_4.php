@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'Media',
    'description' => '',
    'creationDate' => 1675938955,
-   'modificationDate' => 1676006591,
+   'modificationDate' => 1676528217,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronics',
@@ -115,7 +115,6 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'options' => NULL,
              'width' => '',
              'defaultValue' => 'db_value_1',
              'optionsProviderClass' => 'App\\DynamicDropdown\\CustomOptionsColor',

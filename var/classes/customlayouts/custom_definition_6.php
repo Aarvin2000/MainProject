@@ -10,7 +10,7 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
    'name' => 'Development',
    'description' => '',
    'creationDate' => 1675939048,
-   'modificationDate' => 1676006591,
+   'modificationDate' => 1676528226,
    'userOwner' => 2,
    'userModification' => 0,
    'classId' => 'electronics',
@@ -31,10 +31,10 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
     array (
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
-         'name' => 'Manufacturer details',
+         'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
-         'title' => 'Manufacturer details',
+         'title' => '',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -45,144 +45,180 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-             'name' => 'manufacturingCompany',
-             'title' => 'Manufacturing Company',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'input',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'Manufacturer details',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => 'Manufacturer details',
              'width' => '',
-             'defaultValue' => NULL,
-             'columnLength' => 190,
-             'regex' => '',
-             'regexFlags' => 
-            array (
-            ),
-             'unique' => false,
-             'showCharCount' => false,
-             'defaultValueGenerator' => '',
-          )),
-          1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
-             'name' => 'manufacturingDate',
-             'title' => 'Manufacturing Date',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
+             'height' => '',
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => '',
+             'datatype' => 'layout',
              'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'date',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'queryColumnType' => 'bigint(20)',
-             'columnType' => 'bigint(20)',
-             'defaultValue' => 1673461800,
-             'useCurrentDate' => false,
-             'defaultValueGenerator' => '',
-          )),
-          2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
-             'name' => 'warranty',
-             'title' => 'Warranty',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'booleanSelect',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'yesLabel' => 'Yes',
-             'noLabel' => 'No',
-             'emptyLabel' => '',
-             'options' => 
+             'children' => 
             array (
               0 => 
-              array (
-                'key' => '',
-                'value' => 0,
-              ),
+              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToOneRelation::__set_state(array(
+                 'name' => 'Manufacturer',
+                 'title' => 'Manufacturer',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'manyToOneRelation',
+                 'relationType' => true,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'classes' => 
+                array (
+                  0 => 
+                  array (
+                    'classes' => 'Manufacturer',
+                  ),
+                ),
+                 'pathFormatterClass' => '',
+                 'width' => '',
+                 'assetUploadPath' => '',
+                 'objectsAllowed' => true,
+                 'assetsAllowed' => false,
+                 'assetTypes' => 
+                array (
+                ),
+                 'documentsAllowed' => false,
+                 'documentTypes' => 
+                array (
+                ),
+              )),
               1 => 
-              array (
-                'key' => 'Yes',
-                'value' => 1,
-              ),
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+                 'name' => 'manufacturingDate',
+                 'title' => 'Manufacturing Date',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'date',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'queryColumnType' => 'bigint(20)',
+                 'columnType' => 'bigint(20)',
+                 'defaultValue' => 1673461800,
+                 'useCurrentDate' => false,
+                 'defaultValueGenerator' => '',
+              )),
               2 => 
-              array (
-                'key' => 'No',
-                'value' => -1,
-              ),
+              Pimcore\Model\DataObject\ClassDefinition\Data\BooleanSelect::__set_state(array(
+                 'name' => 'warranty',
+                 'title' => 'Warranty',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'booleanSelect',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'yesLabel' => 'Yes',
+                 'noLabel' => 'No',
+                 'emptyLabel' => '',
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => '',
+                    'value' => 0,
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Yes',
+                    'value' => 1,
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'No',
+                    'value' => -1,
+                  ),
+                ),
+                 'width' => '',
+              )),
+              3 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
+                 'name' => 'warrantyPeriod',
+                 'title' => 'Warranty Period',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'quantityValue',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'unitWidth' => '',
+                 'defaultValue' => NULL,
+                 'defaultUnit' => NULL,
+                 'validUnits' => 
+                array (
+                  0 => 'year',
+                ),
+                 'integer' => false,
+                 'unsigned' => false,
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'unique' => false,
+                 'decimalSize' => NULL,
+                 'decimalPrecision' => NULL,
+                 'autoConvert' => false,
+                 'defaultValueGenerator' => '',
+              )),
             ),
-             'width' => '',
-          )),
-          3 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
-             'name' => 'warrantyPeriod',
-             'title' => 'Warranty Period',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
              'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'quantityValue',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
              'blockedVarsForExport' => 
             array (
             ),
-             'width' => '',
-             'unitWidth' => '',
-             'defaultValue' => NULL,
-             'defaultUnit' => NULL,
-             'validUnits' => 
-            array (
-              0 => 'year',
-            ),
-             'integer' => false,
-             'unsigned' => false,
-             'minValue' => NULL,
-             'maxValue' => NULL,
-             'unique' => false,
-             'decimalSize' => NULL,
-             'decimalPrecision' => NULL,
-             'autoConvert' => false,
-             'defaultValueGenerator' => '',
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
           )),
-          4 => 
+          1 => 
           Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
              'name' => 'Seller Details',
              'type' => NULL,
@@ -221,14 +257,14 @@ return Pimcore\Model\DataObject\ClassDefinition\CustomLayout::__set_state(array(
                 array (
                   0 => 
                   array (
-                    'classes' => 'seller',
+                    'classes' => 'Seller',
                   ),
                 ),
                  'pathFormatterClass' => '',
                  'width' => '',
                  'height' => '',
                  'maxItems' => NULL,
-                 'visibleFields' => 'sellerId,Name,product',
+                 'visibleFields' => 'sellerId,Name,fullpath,classname',
                  'allowToCreateNewObject' => false,
                  'optimizedAdminLoading' => false,
                  'enableTextSelection' => false,

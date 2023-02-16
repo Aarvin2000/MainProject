@@ -1,0 +1,398 @@
+pimcore:
+    custom_report:
+        definitions:
+            workflowreport:
+                name: workflowreport
+                sql: ''
+                dataSourceConfig:
+                    -
+                        sql: '*'
+                        from: "element_workflow_state as W\nJOIN object_electronics as E ON W.cid=E.o_id"
+                        where: ''
+                        groupby: ''
+                        type: sql
+                columnConfiguration:
+                    -
+                        name: cid
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-1
+                    -
+                        name: ctype
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-2
+                    -
+                        name: place
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-3
+                    -
+                        name: workflow
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-4
+                    -
+                        name: oo_id
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-5
+                    -
+                        name: oo_classId
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-6
+                    -
+                        name: oo_className
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-7
+                    -
+                        name: manufacturingDate
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-8
+                    -
+                        name: sellerDetails
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-9
+                    -
+                        name: price__value
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-10
+                    -
+                        name: price__unit
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-11
+                    -
+                        name: discountPercentage
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-12
+                    -
+                        name: displayPrice
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-13
+                    -
+                        name: thumbnail
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-14
+                    -
+                        name: imageGallery__images
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-15
+                    -
+                        name: imageGallery__hotspots
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-16
+                    -
+                        name: ProductColor
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-17
+                    -
+                        name: warranty
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-18
+                    -
+                        name: warrantyPeriod__value
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-19
+                    -
+                        name: warrantyPeriod__unit
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-20
+                    -
+                        name: batteryCapacity__value
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-21
+                    -
+                        name: batteryCapacity__unit
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-22
+                    -
+                        name: quickCharging
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-23
+                    -
+                        name: connectivity
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-24
+                    -
+                        name: operatingSystem
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-25
+                    -
+                        name: Manufacturer__id
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-26
+                    -
+                        name: Manufacturer__type
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-27
+                    -
+                        name: Bluetooth
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-28
+                    -
+                        name: Wifi
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-29
+                    -
+                        name: category
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-30
+                    -
+                        name: o_id
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-31
+                    -
+                        name: o_parentId
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-32
+                    -
+                        name: o_type
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-33
+                    -
+                        name: o_key
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-34
+                    -
+                        name: o_path
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-35
+                    -
+                        name: o_index
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-36
+                    -
+                        name: o_published
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-37
+                    -
+                        name: o_creationDate
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-38
+                    -
+                        name: o_modificationDate
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-39
+                    -
+                        name: o_userOwner
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-40
+                    -
+                        name: o_userModification
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-41
+                    -
+                        name: o_classId
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-42
+                    -
+                        name: o_className
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-43
+                    -
+                        name: o_childrenSortBy
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-44
+                    -
+                        name: o_childrenSortOrder
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-45
+                    -
+                        name: o_versionCount
+                        display: true
+                        export: true
+                        order: true
+                        width: ''
+                        label: ''
+                        id: extModel1422-46
+                niceName: ''
+                group: ''
+                groupIconClass: ''
+                iconClass: ''
+                menuShortcut: true
+                reportClass: ''
+                chartType: pie
+                pieColumn: oo_id
+                pieLabelColumn: category
+                xAxis: null
+                yAxis: {  }
+                modificationDate: 1676442957
+                creationDate: 1676442660
+                shareGlobally: true
+                sharedUserNames: {  }
+                sharedRoleNames: {  }

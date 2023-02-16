@@ -40,7 +40,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'description' => 'Contain information about clothing class and its attributes
 ',
    'creationDate' => 0,
-   'modificationDate' => 1676211504,
+   'modificationDate' => 1676460184,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -177,7 +177,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                     array (
                     ),
                      'width' => '',
-                     'defaultValue' => 'db_value_1',
+                     'defaultValue' => ' ',
                      'optionsProviderClass' => 'App\\DynamicDropdown\\BrandName',
                      'optionsProviderData' => '',
                      'columnLength' => 190,
@@ -350,7 +350,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'width' => '',
                  'unitWidth' => '',
                  'defaultValue' => NULL,
-                 'defaultUnit' => NULL,
+                 'defaultUnit' => 'INR',
                  'validUnits' => 
                 array (
                   0 => 'INR',
@@ -417,7 +417,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
                  'elementType' => 'input',
-                 'width' => '',
+                 'width' => 250,
                  'calculatorType' => 'class',
                  'calculatorExpression' => '',
                  'calculatorClass' => '@App\\Controller\\DiscountCalc',
@@ -579,7 +579,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
                  'width' => '',
-                 'defaultValue' => 'db_value_1',
+                 'defaultValue' => ' ',
                  'optionsProviderClass' => 'App\\DynamicDropdown\\CustomOptionsColor',
                  'optionsProviderData' => '',
                  'columnLength' => 190,
@@ -898,7 +898,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                     array (
                     ),
                      'width' => '',
-                     'defaultValue' => 'db_value_1',
+                     'defaultValue' => ' ',
                      'optionsProviderClass' => 'App\\DynamicDropdown\\Os',
                      'optionsProviderData' => '',
                      'columnLength' => 190,
@@ -1222,7 +1222,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
       'creationDate' => true,
     ),
   ),
-   'enableGridLocking' => false,
+   'enableGridLocking' => true,
    'deletedDataComponents' => 
   array (
   ),

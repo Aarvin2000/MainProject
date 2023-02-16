@@ -8,7 +8,7 @@ pimcore_data_hub:
                 description: ''
                 group: ''
                 path: null
-                modificationDate: 1676265752
+                modificationDate: 1676464300
                 createDate: 1675848727
             loaderConfig:
                 type: asset
@@ -79,7 +79,7 @@ pimcore_data_hub:
                             writeIfSourceIsEmpty: true
                     transformationPipeline: {  }
                 -
-                    label: key
+                    label: Name
                     dataSourceIndex:
                         - '2'
                     transformationResultType: default
@@ -94,7 +94,7 @@ pimcore_data_hub:
             executionConfig:
                 scheduleType: job
                 cronDefinition: ''
-                scheduledAt: '08-02-2023 10:52'
+                scheduledAt: '08-02-2023 16:15'
             permissions:
                 user:
                     -
